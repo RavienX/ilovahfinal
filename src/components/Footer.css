@@ -1,0 +1,92 @@
+.il-footer {
+  background: var(--black);
+  color: rgba(255, 255, 255, 0.65);
+  padding: 60px 5% 24px;
+}
+
+.il-footer-grid {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+  padding-bottom: 36px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.il-footer-col h4 {
+  font-family: 'Black Ops One', cursive;
+  color: #fff;
+  font-size: 0.95rem;
+  margin: 0 0 16px;
+  letter-spacing: 0.02em;
+}
+
+.il-footer-col ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.il-footer-col ul li {
+  margin-bottom: 9px;
+}
+
+.il-footer-col ul a {
+  font-size: 0.86rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.il-footer-col ul a:hover {
+  color: var(--red2);
+}
+
+.il-footer-brand .footer-logo {
+  font-family: 'Black Ops One', cursive;
+  color: #fff;
+  font-size: 1.2rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 14px;
+}
+
+.il-footer-brand p {
+  font-size: 0.88rem;
+  line-height: 1.6;
+  margin: 12px 0 16px;
+  max-width: 320px;
+}
+
+.il-footer-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.88rem;
+  margin-bottom: 8px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.il-footer-bottom {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding-top: 22px;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+}
+
+@media (max-width: 1024px) {
+  .il-footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 640px) {
+  .il-footer-grid {
+    grid-template-columns: 1fr;
+  }
+}

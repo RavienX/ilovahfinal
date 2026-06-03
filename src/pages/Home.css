@@ -1,0 +1,373 @@
+/* ============================================================================ */
+/* Home Page — dual hero + areas + quote                                        */
+/* ============================================================================ */
+
+.dual-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: 600px;
+  position: relative;
+}
+
+.hero-or {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: var(--charcoal);
+  font-family: 'Black Ops One', cursive;
+  font-size: 1.4rem;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  letter-spacing: 0.05em;
+}
+
+.hero-side {
+  padding: 60px 5% 80px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-side .hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 540px;
+  margin-left: auto;
+}
+
+.hero-side .hero-inner.right {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.hero-side.cleaning {
+  background: linear-gradient(135deg, var(--dark) 0%, #0a1828 100%);
+  color: #fff;
+}
+.hero-side.cleaning::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top right, rgba(43, 143, 212, 0.25), transparent 60%);
+}
+
+.hero-side.pest {
+  background: linear-gradient(135deg, var(--pest-bg) 0%, var(--black) 100%);
+  color: #fff;
+}
+.hero-side.pest::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at top left, rgba(232, 35, 42, 0.25), transparent 60%);
+}
+
+.side-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.7rem;
+  font-weight: 900;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 22px;
+}
+.side-eyebrow.blue {
+  background: rgba(43, 143, 212, 0.15);
+  border: 1px solid rgba(43, 143, 212, 0.3);
+  color: var(--blue2);
+}
+.side-eyebrow.red {
+  background: rgba(232, 35, 42, 0.15);
+  border: 1px solid rgba(232, 35, 42, 0.3);
+  color: var(--red2);
+}
+.side-eyebrow .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+}
+.side-eyebrow.blue .dot { background: var(--blue2); }
+.side-eyebrow.red .dot { background: var(--red2); }
+
+.hero-side h1 {
+  font-family: 'Black Ops One', cursive;
+  font-size: clamp(2rem, 3.4vw, 2.8rem);
+  line-height: 1.05;
+  letter-spacing: 0.005em;
+  margin: 0 0 14px;
+}
+
+.hero-side h1 .accent-blue { color: var(--blue2); }
+.hero-side h1 .accent-red { color: var(--red2); }
+
+.hero-side .lede {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 1rem;
+  line-height: 1.55;
+  margin: 0 0 20px;
+  max-width: 440px;
+}
+
+.hero-side ul.feats {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 22px;
+}
+
+.hero-side ul.feats li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 0;
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.85);
+}
+.hero-side ul.feats li::before {
+  content: '✓';
+  color: #1ee46a;
+  font-weight: 900;
+}
+
+.hero-ctas {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* ============ COMBO BANNER ============ */
+.combo-banner {
+  background: linear-gradient(90deg, var(--red), var(--blue));
+  color: #fff;
+  padding: 18px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.combo-banner .save-tag {
+  background: rgba(255, 255, 255, 0.18);
+  padding: 5px 11px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.combo-banner p {
+  font-family: 'Black Ops One', cursive;
+  font-size: 1.05rem;
+  letter-spacing: 0.015em;
+  margin: 0;
+}
+
+.combo-banner a {
+  background: #fff;
+  color: var(--charcoal);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 0.82rem;
+  font-weight: 900;
+  transition: all 0.2s;
+}
+.combo-banner a:hover {
+  transform: scale(1.05);
+}
+
+/* ============ TRUST STRIP ============ */
+.trust-strip {
+  background: #fff;
+  padding: 30px 5%;
+  border-bottom: 1px solid var(--border);
+}
+
+.trust-strip-inner {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  align-items: center;
+}
+
+.trust-stat {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.trust-stat .num {
+  font-family: 'Black Ops One', cursive;
+  font-size: 2rem;
+  color: var(--red);
+  line-height: 1;
+}
+
+.trust-stat .label {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.trust-stat .label b {
+  color: var(--charcoal);
+  font-weight: 900;
+}
+
+/* ============ AREAS CLUSTERS ============ */
+.areas-clusters {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.cluster-card {
+  background: var(--offwhite);
+  border: 1.5px solid var(--border);
+  border-radius: 16px;
+  padding: 26px;
+  transition: all 0.25s;
+  display: block;
+}
+
+.cluster-card:hover {
+  border-color: var(--red);
+  background: #fff;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.06);
+  transform: translateY(-3px);
+}
+
+.cluster-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.cluster-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--red), var(--red-dark));
+  color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 1.2rem;
+}
+
+.cluster-card h3 {
+  font-family: 'Black Ops One', cursive;
+  font-size: 1.15rem;
+  color: var(--charcoal);
+  letter-spacing: 0.01em;
+  margin: 0;
+}
+.cluster-card h3 small {
+  display: block;
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem;
+  font-weight: 800;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+
+.cluster-card p {
+  font-size: 0.88rem;
+  color: var(--dark);
+  font-weight: 600;
+  line-height: 1.55;
+  margin-bottom: 12px;
+}
+
+.suburb-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+.suburb-tags span {
+  background: rgba(232, 35, 42, 0.08);
+  color: var(--red-dark);
+  padding: 4px 9px;
+  border-radius: 5px;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.cluster-card .more {
+  font-size: 0.78rem;
+  color: var(--muted);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.cluster-card .link {
+  color: var(--red);
+  font-size: 0.85rem;
+  font-weight: 900;
+}
+
+/* ============ QUOTE SECTION ============ */
+.quote-section {
+  background: var(--offwhite);
+  padding: 80px 5%;
+}
+
+.quote-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.quote-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.quote-bullets li {
+  display: flex;
+  gap: 10px;
+  padding: 9px 0;
+  border-top: 1px solid var(--border);
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--dark);
+}
+.quote-bullets li:last-child {
+  border-bottom: 1px solid var(--border);
+}
+.quote-bullets li::before {
+  content: '✓';
+  color: var(--red);
+  font-weight: 900;
+}
+
+@media (max-width: 1024px) {
+  .dual-hero {
+    grid-template-columns: 1fr;
+  }
+  .hero-or { display: none; }
+  .areas-clusters { grid-template-columns: 1fr; }
+  .trust-strip-inner { grid-template-columns: 1fr 1fr; gap: 18px; }
+  .quote-wrap { grid-template-columns: 1fr; gap: 32px; }
+}
+
+@media (max-width: 640px) {
+  .trust-strip-inner { grid-template-columns: 1fr; }
+}
